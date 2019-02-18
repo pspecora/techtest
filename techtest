@@ -1,0 +1,10 @@
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="text" encoding="utf-8" indent="no"/>
+    <xsl:template match="/">
+    <xsl:for-each select="root/album">              <!-- This for each function applies to every entry in the dataset -->
+      <xsl:value-of select="title"/>, <xsl:value-of select="artist"/>, <xsl:value-of select="price"/> <!-- Format: Title, Artist, Price -->
+      <xsl:text>&#xa;</xsl:text>                    <!-- New Line Character -->
+    </xsl:for-each>
+    </xsl:template>
+</xsl:stylesheet>
